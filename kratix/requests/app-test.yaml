@@ -1,0 +1,38 @@
+apiVersion: platform.nttdata.io/v1alpha1
+kind: AppModelA
+metadata:
+  name: demo-app-complete-v2
+  namespace: default
+spec:
+  appName: demo-app
+  image: nginx:1.24
+  namespace: demo-namespace
+  port: 80
+  replicas: 2
+  serviceType: ClusterIP
+  imagePullPolicy: IfNotPresent
+  gateway:
+    enabled: false
+    gatewayName: "nginx-gateway"
+    gatewayNamespace: "nginx-gateway-system"
+    hostname: ""
+    path: "/"
+    tls: false
+  storage:
+    enabled: false
+    size: "1Gi"
+    storageClass: "gp3"
+    mountPath: "/data"
+  database:
+    enabled: false
+    type: "postgresql"
+    claimApiVersion: "database.example.org/v1alpha1"
+    claimKind: "PostgreSQLInstance"
+    claimName: ""
+    parameters:
+      engine: "postgres"
+      version: "15"
+      instanceSize: "db.t3.micro"
+      storageGB: 20
+      username: "appuser"
+      publiclyAccessible: false

@@ -1,0 +1,24 @@
+apiVersion: platform.kratix.io/v1alpha1
+kind: AppModelARequest
+metadata:
+  name: webapp-
+  namespace: default
+spec:
+  app:
+    name: "webapp"
+    image: "nginx:1.24"
+    imagePullPolicy: "IfNotPresent"
+    port: 80
+    replicas: 2
+    serviceType: "ClusterIP"
+  target:
+    namespace: "demo-namespace"
+  gateway:
+    enabled: false
+    
+  storage:
+    enabled: false
+    
+  database:
+    enabled: false
+    

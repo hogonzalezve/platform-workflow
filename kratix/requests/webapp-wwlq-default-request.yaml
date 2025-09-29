@@ -1,0 +1,45 @@
+apiVersion: platform.nttdata.io/v1alpha1
+kind: AppModelA
+metadata:
+  name: webapp-wwlq
+  namespace: kratix-worker-system
+  labels:
+    app: webapp-wwlq
+    created-by: backstage
+    request-id: "wwlq"
+  annotations:
+    backstage.io/created-at: ""
+    backstage.io/requested-by: "unknown"
+spec:
+  appName: webapp
+  namespace: default
+  image: nginx:latest
+  port: 80
+  replicas: 1
+  serviceType: ClusterIP
+  imagePullPolicy: Always
+  gateway:
+    enabled: false
+    hostname: ""
+    gatewayName: "nginx-gateway"
+    gatewayNamespace: "nginx-gateway-system"
+    path: "/"
+    tls: false
+  storage:
+    enabled: false
+    size: "1Gi"
+    storageClass: "gp3"
+    mountPath: "/data"
+  database:
+    enabled: false
+    type: "postgresql"
+    claimApiVersion: "database.example.org/v1alpha1"
+    claimKind: "PostgreSQLInstance"
+    claimName: ""
+    parameters:
+      engine: "postgres"
+      version: "15"
+      instanceSize: "db.t3.micro"
+      storageGB: 20
+      username: "appuser"
+      publiclyAccessible: false

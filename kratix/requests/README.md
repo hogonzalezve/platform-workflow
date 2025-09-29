@@ -68,7 +68,7 @@ Esta plantilla permite a los desarrolladores crear requests de aplicaciones usan
 platform-templates/templates/
 ├── app-model-a-request.yaml          # Template principal
 └── skeletons/app-model-a-request/
-    └── webapp-my7d-default-request.yaml  # Template del request
+    └── webapp-yhf5-default-request.yaml  # Template del request
 ```
 
 ## 🚀 **Uso:**

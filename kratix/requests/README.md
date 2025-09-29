@@ -68,7 +68,7 @@ Esta plantilla permite a los desarrolladores crear requests de aplicaciones usan
 platform-templates/templates/
 ├── app-model-a-request.yaml          # Template principal
 └── skeletons/app-model-a-request/
-    └── webapp-2igz-default-request.yaml  # Template del request
+    └── webapp-naua-default-request.yaml  # Template del request
 ```
 
 ## 🚀 **Uso:**

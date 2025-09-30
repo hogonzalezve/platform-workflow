@@ -37,7 +37,7 @@ Esta plantilla permite a los desarrolladores crear requests de aplicaciones usan
 - `storageEnabled`: Habilitar almacenamiento persistente
 - `storageSize`: Tamaño del volumen (ej: "1Gi")
 - `storageMountPath`: Ruta de montaje (default: "/data")
-- `storageClass`: Clase de almacenamiento (default: "gp3")
+- `storageClass`: Clase de almacenamiento (default: "gp2")
 
 ### **Database Configuration:**
 - `databaseEnabled`: Solicitar base de datos
